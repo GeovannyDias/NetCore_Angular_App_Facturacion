@@ -1,2 +1,2 @@
-# NetCore_Angular_App_Facturacion
+# NetCore, Angular, App Facturación
 .Net Core (Api RestFull), Angular, Sql Server
