@@ -1,0 +1,23 @@
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="title">Credit Card</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-lg-6">
+            <app-credit-card></app-credit-card>
+        </div>
+        <div class="col-lg-6">
+            <!-- (deleteCard)="deteteCard($event)" → No usado - Test de comunicacion de hijo a padre -->
+            <app-list-credit-card (deleteCard)="deteteCard($event)"></app-list-credit-card>
+        </div>
+    </div>
+
+</div>

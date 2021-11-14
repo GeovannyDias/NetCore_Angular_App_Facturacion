@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-body">
+        <h3 class="title">Credit Card List</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Titular</th>
+                        <th scope="col">Card Number</th>
+                        <th scope="col">Exp. Date</th>
+                        <th scope="col">CVV</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let card of listCards">
+                        <th scope="row">{{ card.titular }}</th>
+                        <td>{{ card.numberCard }}</td>
+                        <td>{{ card.expirationDate }}</td>
+                        <td>{{ card.cvv }}</td>
+                        <td>
+                            <span class="far fa-edit text-info" (click)="updateCreditCard(card)"></span>
+                        </td>
+                        <td>
+                            <span class="far fa-trash-alt text-danger" (click)="deleteCreditCard(card.id)"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
