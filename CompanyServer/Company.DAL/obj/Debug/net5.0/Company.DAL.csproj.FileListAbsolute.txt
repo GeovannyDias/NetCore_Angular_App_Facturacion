@@ -1,0 +1,15 @@
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\bin\Debug\net5.0\Company.DAL.deps.json
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\bin\Debug\net5.0\Company.DAL.runtimeconfig.json
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\bin\Debug\net5.0\Company.DAL.runtimeconfig.dev.json
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\bin\Debug\net5.0\Company.DAL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\bin\Debug\net5.0\ref\Company.DAL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\bin\Debug\net5.0\Company.DAL.pdb
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\Company.DAL.csproj.AssemblyReference.cache
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\Company.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\Company.DAL.AssemblyInfoInputs.cache
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\Company.DAL.AssemblyInfo.cs
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\Company.DAL.csproj.CoreCompileInputs.cache
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\Company.DAL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\ref\Company.DAL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\Company.DAL.pdb
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.DAL\obj\Debug\net5.0\Company.DAL.genruntimeconfig.cache

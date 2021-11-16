@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Developer_Studio\\Web\\Test_Jobs\\06_Sicobra\\NetCore_Angular_App_Facturacion\\CompanyServer\\Caompany.BL\\Caompany.BL.csproj",
-      "projectName": "Caompany.BL",
-      "projectPath": "D:\\Developer_Studio\\Web\\Test_Jobs\\06_Sicobra\\NetCore_Angular_App_Facturacion\\CompanyServer\\Caompany.BL\\Caompany.BL.csproj",
+      "projectUniqueName": "D:\\Developer_Studio\\Web\\Test_Jobs\\06_Sicobra\\NetCore_Angular_App_Facturacion\\CompanyServer\\Caompany.BL\\Company.BL.csproj",
+      "projectName": "Company.BL",
+      "projectPath": "D:\\Developer_Studio\\Web\\Test_Jobs\\06_Sicobra\\NetCore_Angular_App_Facturacion\\CompanyServer\\Caompany.BL\\Company.BL.csproj",
       "packagesPath": "C:\\Users\\Geo\\.nuget\\packages\\",
       "outputPath": "D:\\Developer_Studio\\Web\\Test_Jobs\\06_Sicobra\\NetCore_Angular_App_Facturacion\\CompanyServer\\Caompany.BL\\obj\\",
       "projectStyle": "PackageReference",

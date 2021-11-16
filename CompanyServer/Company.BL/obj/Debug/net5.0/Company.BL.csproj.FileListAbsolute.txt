@@ -1,0 +1,15 @@
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\bin\Debug\net5.0\Company.BL.deps.json
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\bin\Debug\net5.0\Company.BL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\bin\Debug\net5.0\ref\Company.BL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\bin\Debug\net5.0\Company.BL.pdb
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\bin\Debug\net5.0\Company.DAL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\bin\Debug\net5.0\Company.DAL.pdb
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\Company.BL.csproj.AssemblyReference.cache
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\Company.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\Company.BL.AssemblyInfoInputs.cache
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\Company.BL.AssemblyInfo.cs
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\Company.BL.csproj.CoreCompileInputs.cache
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\Company.BL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\ref\Company.BL.dll
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\Company.BL.pdb
+D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.BL\obj\Debug\net5.0\Company.BL.csproj.CopyComplete
