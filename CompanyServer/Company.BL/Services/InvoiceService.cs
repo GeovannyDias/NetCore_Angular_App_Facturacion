@@ -45,7 +45,14 @@ namespace Company.BL.Services
                 invoice.Code = dataInvoice.Code;
                 invoice.InvoiceDate = DateTime.Now;
                 invoice.CustomerId = dataInvoice.CustomerId;
-                invoice.Total = dataInvoice.InvoiceDetails.Sum(d => d.Amount * d.UnitPrice); // lambda
+                invoice.State = true;
+
+                // invoice.Total = dataInvoice.InvoiceDetails.Sum(d => d.Amount * d.UnitPrice); // lambda
+                var subtotal = dataInvoice.InvoiceDetails.Sum(d => d.Amount * d.UnitPrice); // lambda
+                var iva = subtotal * 0.12m; // m → literal con sufijo (m) es de tipo decimal.
+                invoice.Subtotal = subtotal;
+                invoice.Iva = iva;
+                invoice.Total = subtotal + iva;
 
                 _context.Invoice.Add(invoice);
                 await _context.SaveChangesAsync();

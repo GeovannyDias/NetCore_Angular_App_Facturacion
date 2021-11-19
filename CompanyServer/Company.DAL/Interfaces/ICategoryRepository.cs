@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+
+// Intefaces o contratos con las funciones que si o si el servicio debe tener
 namespace Company.DAL.Interfaces
 {
     public interface ICategoryRepository

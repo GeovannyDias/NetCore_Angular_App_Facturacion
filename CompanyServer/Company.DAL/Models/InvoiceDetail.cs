@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+// MODEL OR ENTITY
 namespace Company.DAL.Models
 {
     public class InvoiceDetail
@@ -19,7 +20,7 @@ namespace Company.DAL.Models
 
         // Cantidad
         [Required]
-        [MaxLength(100)]
+//        [MaxLength(100)]
         public int Amount { get; set; }
 
         [Required]

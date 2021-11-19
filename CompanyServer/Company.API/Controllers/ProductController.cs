@@ -35,6 +35,24 @@ namespace Company.API.Controllers
             }
         }
 
+
+        // GET DATA WITH QUERY // [Route("Home/About/{id?}")]
+        // GET: api/<ProductController>/state
+        [HttpGet]
+        [Route("state/{state}")]
+        public async Task<IActionResult> GetFilter(bool state)
+        {
+            try
+            {
+                var result = await _productService.GetProductsByState(state);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         // GET api/<ProductController>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)

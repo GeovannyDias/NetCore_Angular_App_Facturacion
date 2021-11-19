@@ -3,6 +3,7 @@ using Company.DAL.Interfaces;
 using Company.DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Company.BL.Services
@@ -22,6 +23,12 @@ namespace Company.BL.Services
         public async Task<IEnumerable<Product>> GetProducts()
         {
             var listProducts = await _context.Product.ToListAsync();
+            return listProducts;
+        }
+
+        public async Task<IEnumerable<Product>> GetProductsByState(bool state)
+        {
+            var listProducts = await _context.Product.AsQueryable().Where(p => p.State == state).ToListAsync();
             return listProducts;
         }
 

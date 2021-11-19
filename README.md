@@ -29,10 +29,36 @@ services.AddControllers().AddNewtonsoftJson(x =>
 
 ```
 
+## Tipos numéricos de punto flotante (referencia de C#)
+* **https://docs.microsoft.com/es-es/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types**
+
+
+```
+Literales reales
+
+El tipo de un literal real viene determinado por su sufijo, como se indica a continuación:
+
+El literal sin sufijo o con el sufijo d o D es del tipo double
+El literal con el sufijo f o F es del tipo float
+El literal con el sufijo m o M es del tipo decimal
+En el código siguiente se muestra un ejemplo de cada uno de ellos:
+
+double d = 3D;
+d = 4d;
+d = 3.934_001;
+
+float f = 3_000.5F;
+f = 5.4f;
+
+decimal myMoney = 3_000.5m;
+myMoney = 400.75M;
+
+```
 
 ## Recuperación de datos relacionados
 
 * **https://docs.microsoft.com/es-es/dotnet/architecture/modern-web-apps-azure/work-with-data-in-asp-net-core-apps**
+* **https://docs.microsoft.com/en-us/ef/core/miscellaneous/async**
 
 ```
 // Includes all expression-based includes
@@ -42,6 +68,16 @@ query = specification.Includes.Aggregate(query,
 // Include any string-based include statements
 query = specification.IncludeStrings.Aggregate(query,
             (current, include) => current.Include(include));
+
+
+Asynchronous Programming
+
+var groupedHighlyRatedBlogs = await context.Blogs
+    .AsQueryable()
+    .Where(b => b.Rating > 3) // server-evaluated
+    .AsAsyncEnumerable()
+    .GroupBy(b => b.Rating) // client-evaluated
+    .ToListAsync();
 
 ```
 
@@ -88,5 +124,35 @@ Ver Doc*
 
 public DateTime PublicationDate { get; set; }
 TimeDate.now
+
+```
+
+## ASP.NET Core Performance Best Practices
+* **https://docs.microsoft.com/en-us/aspnet/core/performance/performance-best-practices?view=aspnetcore-5.0**
+
+```
+Return IEnumerable<T> or IAsyncEnumerable<T>
+
+```
+
+
+## FRONT END
+
+```
+Angular 11:
+
+PrimeNG:
+
+npm install primeng@11 --save
+npm install primeicons --save
+
+npm install @angular/cdk@11 --save
+
+https://stackoverflow.com/questions/55609555/error-module-not-found-error-cant-resolve-angular-cdk-scrolling
+
+
+Pring NG
+
+https://www.geeksforgeeks.org/angular-primeng-dialog-component/
 
 ```

@@ -70,5 +70,86 @@ namespace Company.BL.Services
 
 
 
+
+        /*
+         * 
+         * var blog = context.Blogs.Single(e => e.Id == 1);
+         * var entityEntry = context.Entry(blog);
+         * 
+         * 
+         * SQL QUERY
+         * 
+             public async Task<ActionResult> Details(int? id)
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            // Commenting out original code to show how to use a raw SQL query.
+            //Department department = await db.Departments.FindAsync(id);
+
+            // Create and execute raw SQL query.
+            string query = "SELECT * FROM Department WHERE DepartmentID = @p0";
+            Department department = await db.Departments.SqlQuery(query, id).SingleOrDefaultAsync();
+    
+            if (department == null)
+            {
+                return HttpNotFound();
+            }
+            return View(department);
+         */
+
+
+
     }
 }
+
+
+
+
+
+/*
+
+var posts = await _context.Post
+    .Where(post =>
+        _context.BlogPost.Any(bp => bp.BlogId == blogId && bp.PostId == post.PostId)
+    )
+    .ToListAsync();
+
+
+var postIds = await _context.BlogPost
+    .Where(bp => bp.BlogId = blogId)
+    .Select(bp => bp.PostId)
+    .ToArrayAsync();
+var posts = await _context.Post
+    .Where(p => postIds.Contains(p.PostId))
+    .ToListAsync();
+
+
+var posts = await _context.BlogPost
+    .Where(bp => bp.BlogId == blogId)
+    .Select(bp => bp.Post)
+    .ToListAsync();
+
+
+var posts = await _context.Blog
+    .Where(b => b.BlogId == blogId)
+    .SelectMany(b => b.Posts)
+    .ToListAsync();
+
+
+var posts = await _context.Blog
+    .Where(b => b.BlogId == blogId)
+    .SelectMany(b => b.BlogPosts)
+    .Select(bp => bp.Post)
+    .ToListAsync();
+
+
+var posts = await _context.Blog
+    .Where(b => b.BlogId == blogId)
+    .SelectMany(b => b.BlogPosts.Select(bp => bp.Post))
+    .ToListAsync();
+
+
+
+ */

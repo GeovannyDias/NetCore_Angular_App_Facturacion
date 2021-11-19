@@ -78,6 +78,9 @@ namespace Company.DAL.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 
+                    b.Property<bool>("State")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.ToTable("Customer");
@@ -102,6 +105,15 @@ namespace Company.DAL.Migrations
                         .HasMaxLength(150)
                         .HasColumnType("datetime2");
 
+                    b.Property<decimal>("Iva")
+                        .HasColumnType("decimal(9,2)");
+
+                    b.Property<bool>("State")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("Subtotal")
+                        .HasColumnType("decimal(9,2)");
+
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(9,2)");
 
@@ -121,7 +133,6 @@ namespace Company.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Amount")
-                        .HasMaxLength(100)
                         .HasColumnType("int");
 
                     b.Property<decimal>("Total")
@@ -147,9 +158,6 @@ namespace Company.DAL.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CategoryId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -163,11 +171,12 @@ namespace Company.DAL.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(7,2)");
 
+                    b.Property<bool>("State")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
-
-                    b.HasIndex("CategoryId1");
 
                     b.ToTable("Product");
                 });
@@ -203,12 +212,6 @@ namespace Company.DAL.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Company.DAL.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId1");
-
-                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

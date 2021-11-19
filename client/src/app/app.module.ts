@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import {  } from "@angular/cdk";
 
 // HTTP
 import { HttpClientModule } from "@angular/common/http";
@@ -13,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 // External Libraries
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { AppPrimengModule } from './app-primeng.module';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,12 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
-    HttpClientModule
+    HttpClientModule,
+    AppPrimengModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

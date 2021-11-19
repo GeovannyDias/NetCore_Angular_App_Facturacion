@@ -32,7 +32,8 @@ namespace Company.DAL.Migrations
                     CI = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false)
+                    Address = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    State = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -48,8 +49,8 @@ namespace Company.DAL.Migrations
                     Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Price = table.Column<decimal>(type: "decimal(7,2)", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: false),
-                    CategoryId1 = table.Column<int>(type: "int", nullable: true)
+                    State = table.Column<bool>(type: "bit", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -60,12 +61,6 @@ namespace Company.DAL.Migrations
                         principalTable: "Category",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Product_Category_CategoryId1",
-                        column: x => x.CategoryId1,
-                        principalTable: "Category",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -76,7 +71,10 @@ namespace Company.DAL.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Code = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     InvoiceDate = table.Column<DateTime>(type: "datetime2", maxLength: 150, nullable: false),
+                    Subtotal = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
+                    Iva = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
                     Total = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
+                    State = table.Column<bool>(type: "bit", nullable: false),
                     CustomerId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -96,7 +94,7 @@ namespace Company.DAL.Migrations
                 {
                     InvoiceId = table.Column<int>(type: "int", nullable: false),
                     ProductId = table.Column<int>(type: "int", nullable: false),
-                    Amount = table.Column<int>(type: "int", maxLength: 100, nullable: false),
+                    Amount = table.Column<int>(type: "int", nullable: false),
                     UnitPrice = table.Column<decimal>(type: "decimal(9,2)", nullable: false),
                     Total = table.Column<decimal>(type: "decimal(10,2)", nullable: false)
                 },
@@ -131,11 +129,6 @@ namespace Company.DAL.Migrations
                 name: "IX_Product_CategoryId",
                 table: "Product",
                 column: "CategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Product_CategoryId1",
-                table: "Product",
-                column: "CategoryId1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

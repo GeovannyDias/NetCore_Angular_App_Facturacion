@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
+// MODEL OR ENTITY
 namespace Company.DAL.Models
 {
     public class Customer
@@ -30,6 +30,8 @@ namespace Company.DAL.Models
         [MaxLength(200)]
         public string Address { get; set; }
 
+        [Required]
+        public bool State { get; set; }
 
         // public virtual List<Invoice> Invoices { get; set; }
     }

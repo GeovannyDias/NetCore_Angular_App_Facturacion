@@ -21,11 +21,22 @@ namespace Company.DAL.DTOs
         public int CustomerId { get; set; }
 
         // Optional
+        public decimal? Subtotal { get; set; }
+
+        // Optional
+        public decimal? Iva { get; set; }
+
+        // Optional
         public decimal? Total { get; set; }
 
         [Required]
         [MinLength(1, ErrorMessage = "You must select Products")]
         public List<InvoiceDetailDto> InvoiceDetails { get; set; }
+
+        // Opcional
+        [Required]
+        public bool State { get; set; }
+
 
         public InvoiceDto()
         {

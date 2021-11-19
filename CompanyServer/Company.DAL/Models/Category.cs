@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
+// MODEL OR ENTITY
 namespace Company.DAL.Models
 {
     public class Category

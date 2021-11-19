@@ -1,0 +1,67 @@
+<div class="container mt-5">
+
+    <div class="row mt-4">
+        <div class="card pt-2">
+            <button pButton pRipple type="button" icon="pi pi-arrow-left"
+                class="p-button-rounded p-button-primary p-button-text" (click)="goToProducts()">
+            </button>
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="title">Producto</h3>
+
+                        <form class="form-group" [formGroup]="myForm" (ngSubmit)="onSave()">
+                            <div class="input-group input-group-lg mb-3">
+                                <input type="text" class="form-control" placeholder="Nombre" formControlName="name"
+                                    [ngClass]="isValidField('name')">
+                            </div>
+
+                            <div class="input-group input-group-lg mb-3">
+                                <input type="text" maxlength="200" class="form-control" placeholder="Descripción"
+                                    formControlName="description" [ngClass]="isValidField('description')">
+                            </div>
+
+                            <div class="input-group input-group-lg mb-3">
+                                <input type="number" maxlength="5" class="form-control" placeholder="Precio"
+                                    formControlName="price" [ngClass]="isValidField('price')">
+                            </div>
+
+                            <select class="form-select form-select-lg mb-3 form-control" value=""
+                                formControlName="categoryId" [ngClass]="isValidField('categoryId')"
+                                (change)="selectCategory($event)">
+                                <option value="" selected disabled>Category</option>
+                                <option *ngFor="let category of dataCategories" [value]="category.id">
+                                    {{ category.name }}
+                                </option>
+                            </select>
+
+                            <select class="form-select form-select-lg mb-3 form-control" value=""
+                                formControlName="state" [ngClass]="isValidField('state')"
+                                (change)="selectState($event)">
+                                <option value="" selected disabled>Status</option>
+                                <option value="true">Active</option>
+                                <option value="false">Desactive</option>
+                            </select>
+
+                            <div class="d-grid grap-2">
+                                <button type="submit" class="btn btn-success btn-lg" [disabled]="!myForm.valid">
+                                    <i class="fas fa-database"></i>&nbsp;
+                                    Aceptar
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="grap-2 ">
+                <button type="button" class="btn btn-dark" style="margin-left: 16px;" (click)="goToProducts()">
+                    <i class="fas fa-arrow-left"></i>&nbsp;
+                    Regresar
+                </button>
+            </div> -->
+            <br>
+        </div>
+    </div>
+
+</div>

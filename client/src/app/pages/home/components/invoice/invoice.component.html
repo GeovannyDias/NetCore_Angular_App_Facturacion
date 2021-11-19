@@ -1,0 +1,120 @@
+<p-toast></p-toast>
+
+<form [formGroup]="myForm">
+
+    <div class="container mt-5">
+        <div class="row mt-4">
+            <div class="card">
+                <button pButton pRipple type="button" icon="pi pi-arrow-left
+                        " class="p-button-rounded p-button-primary p-button-text" (click)="goToHome()">
+                </button>
+
+                <div class="card-header" style="text-align: center;">
+                    <div><b>NAME COMPANY S.A.</b></div>
+                    <div>Ruc: 1234567899001</div>
+                    <div>Av. La Pensa y Calle José Figueroa, esq.</div>
+                    <div>Telefonos: 022456487</div>
+                    <div class="card-header mt-4"
+                        style="text-align: left; background: #fff; display: flex; flex-wrap: wrap; justify-content: space-around;">
+                        <div>
+                            <div>Nombre: Geovanny Días</div>
+                            <div>CI/Ruc: 1234512345</div>
+                        </div>
+                        <div>
+                            <div>Dirección: El condado</div>
+                            <div>Telefonos: 0987454845</div>
+                        </div>
+                        <div>
+                            <div>Factura: {{ myForm.value.code }}</div>
+                            <div>Fecha: {{ date | date:"dd/MM/yyyy HH:mm"}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Ítem</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Valor U.</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col" style="width: 15px;">
+                                        <!-- <button class="btn btn-primary btn-small" (click)="addDinamico()">+ Add</button> -->
+                                        <button pButton type="button" label="Show" icon="pi pi-plus" class="p-button-sm"
+                                            (click)="selectProductDialog()"></button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let din of getDinamicos.controls; let pointIndex = index"
+                                    formArrayName="invoiceDetails">
+                                    <th [formGroupName]="pointIndex" [formGroupName]="pointIndex" scope="row">
+                                        {{ pointIndex + 1 }}
+                                    </th>
+                                    <td [formGroupName]="pointIndex">
+                                        {{ myForm.value.invoiceDetails[pointIndex].name }}
+                                    </td>
+                                    <td [formGroupName]="pointIndex">
+                                        <input id="amount" style="width: 65px; height: 25px;" type="number"
+                                            placeholder="0" formControlName="amount" required
+                                            (ngModelChange)="validateAmount($event, pointIndex)">
+                                    </td>
+                                    <td [formGroupName]="pointIndex">
+                                        {{ myForm.value.invoiceDetails[pointIndex].unitPrice }}
+                                    </td>
+                                    <td [formGroupName]="pointIndex">
+                                        {{ myForm.value.invoiceDetails[pointIndex].amount *
+                                        myForm.value.invoiceDetails[pointIndex].unitPrice }}
+                                    </td>
+                                    <td [formGroupName]="pointIndex">
+                                        <span class="far fa-trash-alt text-danger" style="cursor: pointer;"
+                                            (click)="removeDinamico(pointIndex)">
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <th scope="row">Subtotal</th>
+                                    <td colspan="2">{{ subtotal | currency }}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <th scope="row">IVA 12%</th>
+                                    <td colspan="2">{{ iva | currency }}</td>
+                                </tr>
+                                <!-- <tr>
+                                    <td colspan="3"></td>
+                                    <th scope="row">IVA 0%</th>
+                                    <td colspan="2">0</td>
+                                </tr> -->
+                                <tr>
+                                    <td colspan="3"></td>
+                                    <th scope="row">Total</th>
+                                    <td colspan="2">{{ total | currency }}</td>
+                                </tr>
+
+                            </tfoot>
+                        </table>
+
+                        <div style="text-align: center;">
+                            <button type="button" class="btn btn-success" (click)="generateInvoice()"
+                                [disabled]="!myForm.valid">Generar
+                                Factura</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</form>
