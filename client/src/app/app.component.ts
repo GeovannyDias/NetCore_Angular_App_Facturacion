@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
+  hideSideBar: boolean = false;
+
+  onHideSideBar(hide: boolean) {
+    this.hideSideBar = hide;
+  }
 }

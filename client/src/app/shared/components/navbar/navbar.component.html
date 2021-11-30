@@ -1,1 +1,50 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <div class="container-fluid">
+
+        <div>
+            <button pButton pRipple type="button" icon="pi pi-chevron-left"
+                class="p-button-rounded p-button-text p-button-lg btn-bars" *ngIf="!hideSideBar; else sideBar" (click)="onHideSideBar()">
+            </button>
+            <ng-template #sideBar>
+                <button pButton pRipple type="button" icon="pi pi-chevron-right"
+                    class="p-button-rounded p-button-text p-button-lg btn-bars" (click)="onHideSideBar()">
+                </button>
+            </ng-template>
+        </div>
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- <form class="d-flex position-relative">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn position-absolute btn-search" type="submit">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+        </form> -->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/images/programmer.png" alt="user" class="img-fluid rounded-circle me-2 avatar">
+                        Geovanny Días
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Subscriptio</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

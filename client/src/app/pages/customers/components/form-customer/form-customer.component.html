@@ -1,0 +1,125 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="form-group" [formGroup]="myForm" (ngSubmit)="onSave()">
+                <div class="p-fluid">
+
+                    <div class="p-field mb-2">
+                        <label>First name</label>
+                        <input type="text" maxlength="100" formControlName="firstName"
+                            [ngClass]="ngValidField('firstName')" pInputText />
+
+                        <small *ngIf="myForm.get('firstName').errors?.required" class="p-error">
+                            * This field is required.
+                        </small>
+                    </div>
+
+                    <!-- input-group-lg  → Clase para que Input sea más ancho -->
+                    <div class="p-field mb-2">
+                        <label>Last name</label>
+                        <input type="text" maxlength="100" formControlName="lastName"
+                            [ngClass]="ngValidField('lastName')" pInputText />
+
+                        <small *ngIf="myForm.get('lastName').errors?.required" class="p-error">
+                            * This field is required.
+                        </small>
+                    </div>
+
+                    <div class="p-field mb-2">
+                        <label>Identity card</label>
+                        <input type="text" maxlength="10" formControlName="ci" [ngClass]="ngValidField('ci')"
+                            pInputText />
+                        <small *ngIf="myForm.get('ci').errors?.required" class="p-error">
+                            * This field is required.
+                        </small>
+
+                        <small *ngIf="myForm.get('ci').errors?.pattern; else onLengthCi" class="p-error">
+                            * Enter only numbers.
+                        </small>
+                        <ng-template #onLengthCi>
+                            <small *ngIf="myForm.get('ci').errors?.minlength" class="p-error">
+                                * Enter 10 digits. &nbsp;
+                            </small>
+                            <small *ngIf="myForm.get('ci').errors?.maxlength" class="p-error">
+                                * Enter max 10 numbers.
+                            </small>
+                        </ng-template>
+                    </div>
+
+                    <div class="p-field mb-2">
+                        <label>Phone</label>
+                        <input type="text" maxlength="10" formControlName="phone" [ngClass]="ngValidField('phone')"
+                            pInputText />
+                        <small *ngIf="myForm.get('phone').errors?.required" class="p-error">
+                            * This field is required.
+                        </small>
+
+                        <small *ngIf="myForm.get('phone').errors?.pattern; else onLengthPhone" class="p-error">
+                            * Enter only numbers.
+                        </small>
+                        <ng-template #onLengthPhone>
+                            <small *ngIf="myForm.get('phone').errors?.minlength" class="p-error">
+                                * Enter a valid number e.g. 024123123 o 09123456789. &nbsp;
+                            </small>
+                            <small *ngIf="myForm.get('phone').errors?.maxlength" class="p-error">
+                                * Enter max 10 numbers.
+                            </small>
+                        </ng-template>
+
+                    </div>
+
+                    <div class="p-field mb-2">
+                        <label>Email</label>
+                        <input type="text" maxlength="100" formControlName="email" [ngClass]="ngValidField('email')"
+                            pInputText />
+                        <small *ngIf="myForm.get('email').errors?.required" class="p-error">
+                            * This field is required.
+                        </small>
+
+                        <small *ngIf="myForm.get('email').errors?.pattern; else onLengthPhone" class="p-error">
+                            * Enter a valid email. e.g. example@email.com
+                        </small>
+                    </div>
+
+                    <div class="p-field mb-2">
+                        <label>Address</label>
+                        <input type="text" maxlength="200" formControlName="address" [ngClass]="ngValidField('address')"
+                            pInputText />
+                        <small *ngIf="myForm.get('address').errors?.required" class="p-error">
+                            * This field is required.
+                        </small>
+                    </div>
+
+                    <!-- <select class="p-field form-select form-select-lg mb-3 form-control rounded-0" value=""
+                        formControlName="state" [ngClass]="isValidField('state')" (change)="selectState($event)">
+                        <option value="" selected disabled>Status</option>
+                        <option value="true">Active</option>
+                        <option value="false">Desactive</option>
+                    </select> -->
+
+                    <div class="p-field mb-3">
+                        <label>State</label>
+                        <p-dropdown inputId="dropdown" [autoDisplayFirst]="false" [options]="states" optionLabel="name"
+                            optionValue="value" placeholder="Select State" formControlName="state"
+                            [ngClass]="ngValidField('state')">
+                        </p-dropdown>
+                        <small *ngIf="myForm.get('state').errors?.required" class="p-error">
+                            * This field is required.
+                        </small>
+                    </div>
+
+                </div>
+
+
+
+                <div class="text-center">
+                    <button pButton type="submit" label="Save data" icon="pi pi-save" iconPos="left"
+                        [disabled]="!myForm.valid">
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>

@@ -155,4 +155,40 @@ Pring NG
 
 https://www.geeksforgeeks.org/angular-primeng-dialog-component/
 
+Ionicons v5.5.2
+
+In app.module.ts
+
+import { NgModule, /** ADD THIS -> **/ CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+@NgModule({
+    declarations: [...],
+    entryComponents: [...],
+    imports: [...],
+    exports: [...],
+    providers: [...],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA] /** 👈🏻 ADD THIS **/ 
+})
+export AppModule {}
+
+in src\index.html
+
+<body>
+  <app-root></app-root>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</body>
+
+https://github.com/ionic-team/ionicons/issues/769
+
+
+PRIMEFLEX: (No instalado)
+
+npm install primeflex@2 --save 
+
+"styles": [
+    "src/styles.scss",
+    "./node_modules/primeflex/primeflex.css"
+],
+
+
 ```

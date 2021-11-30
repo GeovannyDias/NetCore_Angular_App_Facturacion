@@ -1,0 +1,22 @@
+.bg-light {
+  background-color: var(--color-light) !important;
+}
+
+.btn-search {
+  right: 5px;
+}
+
+.avatar {
+  max-width: 35px;
+}
+
+.btn-bars {
+  color: var(--color-primary);
+}
+
+
+@media (max-width: 768px) {
+  .btn-bars {
+    display: none;
+  }
+}

@@ -1,0 +1,54 @@
+a {
+  text-decoration: none;
+}
+/* ----------------------------------------------------------------------------------- */
+
+#sidebar-container {
+  min-height: 100vh;
+}
+
+#sidebar-container,
+.logo {
+  padding: 0.875rem 1.25rem;
+}
+
+#sidebar-container,
+.menu {
+  width: 18rem;
+}
+
+.icon-sidebar {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+/* --------------------------------- Bootstrap class --------------------------------- */
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+// .bg-primary {
+//   background-color: #0D89EC !important;
+// }
+
+// .bg-light {
+//   background-color: var(--color-light) !important;
+// }
+
+// .btn {
+//   border: 0;
+// }
+
+// .btn-primary {
+//   background-color: var(--color-primary);
+// }
+
+// .btn-primary:hover {
+//   background-color: var(--color-primary);
+// }
+
+@media (max-width: 768px) {
+  #sidebar-container {
+    display: none;
+  }
+}
