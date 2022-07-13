@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C660AB4F-72F3-4276-9ED3-6AF42AF416EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.DAL", "Company.DAL\Company.DAL.csproj", "{F37937C2-EBED-48DB-9F85-3A552C1BFDE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.DAL", "Company.DAL\Company.DAL.csproj", "{F37937C2-EBED-48DB-9F85-3A552C1BFDE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.API", "Company.API\Company.API.csproj", "{8428C270-13D8-40BF-8BA1-1CFA38C5F33A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.API", "Company.API\Company.API.csproj", "{8428C270-13D8-40BF-8BA1-1CFA38C5F33A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.BL", "Company.BL\Company.BL.csproj", "{C35CFB2C-6994-4021-90FE-930B73931E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.BL", "Company.BL\Company.BL.csproj", "{C35CFB2C-6994-4021-90FE-930B73931E6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

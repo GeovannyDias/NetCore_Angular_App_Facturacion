@@ -39,27 +39,27 @@ namespace Company.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Company.API", Version = "v1" });
             });
 
-            
 
-            // DATABASE CONNECTION
+
+            // DATABASE CONNECTION * (UseSqlServer -> EntityFrameworkCore)
             // Inyectar el contexto en el contenedor de servicios mediante inyeccion de dependencias
             // services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("cadena_conexion"));
             services.AddDbContext<ApiDbContext>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("DevConnection")
                 ));
 
-            // CORS
+            // CORS *
             services.AddCors(options => options.AddPolicy("AllowWebApp",
                 builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()
                 ));
 
-            // INYECCIÓN DE DEPENDENCIAS
+            // INYECCIÓN DE DEPENDENCIAS * (Agregar database connection)
             services.AddTransient<ICategoryRepository, CategoryService>();
             services.AddTransient<IProductRepository, ProductService>();
             services.AddTransient<ICustomerRepository, CustomerService>();
             services.AddTransient<IInvoiceRepository, InvoiceService>();
 
-            // Corrigiendo el error “A possible object cycle was detected”
+            // Corrigiendo el error “A possible object cycle was detected” *
             // services.AddControllers().AddJsonOptions(x =>
             // x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
 
@@ -75,7 +75,7 @@ namespace Company.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Company.API v1"));
             }
 
-            // CORS
+            // CORS *
             app.UseCors("AllowWebApp"); // Cors
 
             app.UseHttpsRedirection();

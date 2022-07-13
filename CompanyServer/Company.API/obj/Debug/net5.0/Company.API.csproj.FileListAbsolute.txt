@@ -61,4 +61,3 @@ D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\Com
 D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.API\bin\Debug\net5.0\Company.DAL.pdb
 D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.API\bin\Debug\net5.0\Humanizer.dll
 D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\Developer_Studio\Web\Test_Jobs\06_Sicobra\NetCore_Angular_App_Facturacion\CompanyServer\Company.API\obj\Debug\net5.0\Company.API.csproj.CopyComplete

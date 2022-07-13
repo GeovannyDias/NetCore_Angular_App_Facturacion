@@ -192,3 +192,109 @@ npm install primeflex@2 --save
 
 
 ```
+
+## Estructura por capas -  Referencia Proyectos
+
+```
+CompanyServer
+-src
+  -Company.API
+    -Properties
+    -Controllers
+  -Company.BL
+    -Services
+  -Company.DAL
+    -DTOs
+    -Interfaces
+    -Models
+
+Create a new project
+Blank  Solution
+
+Add > New Solution Folder (src)
+
+Add > New Project > Class Library (C#) → (Company.DAL)
+Add > New Project > Class Library (C#) → (Company.BL)
+Add > New Project > ASP.NET Core Web Api (C#) → (Company.API)
+
+
+
+
+
+
+LAYERS:
+
+- Manage NuGet Packages (Install packages)
+- Add > Project Reference (Add reference to projects)
+
+-Company.API
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Company.BL\Company.BL.csproj" />
+    <ProjectReference Include="..\Company.DAL\Company.DAL.csproj" />
+  </ItemGroup>
+
+
+-Company.BL
+
+  <ItemGroup>
+    <ProjectReference Include="..\Company.DAL\Company.DAL.csproj" />
+  </ItemGroup>
+
+-Company.DAL
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+
+
+
+
+add > class > code > class
+add > class > code > interface
+
+
+Code Snippet:
+prop + tab
+
+
+Change startup project:
+
+-Principal solution
+-Project (Menu)
+-Propieties (Select startup project)
+
+
+
+add > controller > API > API Controller with read/write actions
+
+
+
+script para crear el modelo de datos:
+
+ scaffold-DbContext "Data source=[SERVERNAME]; Initial Catalog=[BASEDEDATOS]; user id=[USUARIO]; password=[Contraseña];" Microsoft.EntityFrameworkCore.SqlServer -OutpurDir Models
+ 
+```
+
+## Layers Architecture
+* **https://rjcodeadvance.com/patrones-de-software-arquitectura-en-capas-analisis-completo-ejemplo-ddd-parte-5/**
+* **https://www.youtube.com/watch?v=SGXR0pDCP38**
+```
+Arquitectura en Capas – Análisis completo + Tradicional 
+vs Modernas, DDD, DIP (Cap 5)
+```
